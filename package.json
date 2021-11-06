@@ -1,0 +1,16 @@
+{
+  "name": "my-blog",
+  "version": "0.1.0",
+  "private": true,
+  "main": "my-blog-backend/src/server.js",
+  "scripts": {
+    "start": "cd my-blog-backend/src && node server.js",
+    "start:prod": "cd my-blog-backend && npm start",
+    "start:dev": "concurrently \"cd cd my-blog-backend && npm run watch\" \"cd my-blog && npm start\"",
+    "install": "cd cd my-blog-backend && npm i && cd ../my-blog && npm i",
+    "heroku-postbuild": "cd my-blog && npm install && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
